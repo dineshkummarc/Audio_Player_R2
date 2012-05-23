@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Audio Player</title>
+<script src="includes/swfobject.js" type="text/javascript"></script>
+
+<style type="text/css">
+	body{ font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:20px; }
+	a { color: #1864AF; text-decoration:none; }
+	a:hover { text-decoration:underline; }
+</style>
+
+</head>
+
+<body>
+<h2>Video Player</h3>
+<hr />
+<div id="Flashplayer"></div>
+<script type="text/javascript">
+	var so = new SWFObject("video_player.swf", "swfplayer", "400", "327", "9", "#000000");
+	so.addVariable("flv", "video.flv");
+	so.addVariable("jpg","imagen.jpg");
+	so.addVariable("autoplay","false");
+	 // so.addVariable("autoplay","true");
+	so.addParam("allowFullScreen","true");
+	so.write("Flashplayer");
+</script>
+<hr />
+
+<h2>Audio Player</h3>
+<hr />
+<div id="mp3player"></div>
+<script type="text/javascript">
+	var so = new SWFObject("audio_player.swf", "swfplayer", "400", "27", "9", "#FFFFFF");
+	so.addVariable("mp3", "audio.mp3");
+	so.addVariable("autoplay","true");
+	so.addVariable("effect","false");
+	so.addVariable("backcolor","FFFFFF");
+	so.addVariable("frontcolor","1864AF");
+	so.addVariable("fullscreen","false");
+	so.addParam("allowFullScreen","true");
+	so.write("mp3player");
+</script>
+
+<hr />
+<h3>Variables</h3>
+
+<ul>
+  <li><b>jpg :</b> Archieve for image jpg</li>
+  <li><b>flv :</b> FLV Archieve for Multimedia file</li>
+  <li><b>mp3 :</b> Archieve for audio MP3</li>
+  <li><b>SWFObject :</b> Archieve for SWFObject js Library</li>
+  <li><b>autoplay : true :</b> Allows to play onload event of the webpage</li>
+  <li><b>fullscreen: false :</b> allowFullScreen, intended for video player </li>
+  <li><b>backcolor : </b>Color : FFFFFF</li>
+  <li><b>frontcolor : </b>Color : 000000</li>
+  <li><b>effect : false :</b> Special efectos</li>
+</ul>
+<hr />
+
+</body>
+</html>
